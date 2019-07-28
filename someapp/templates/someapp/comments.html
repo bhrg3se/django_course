@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="user">User</label>
+        <input type="text" name="user"><br>
+        <label for="content">Comment</label>
+        <input type="text" name="content"><br>
+        <input type="submit">
+    </form>
+
+    <l1>
+    {% for commnet in comments %}
+        <ul>{{ commnet.user }} :  {{ commnet.content }}</ul>
+    {% endfor %}
+    </l1>
+{% endblock %}

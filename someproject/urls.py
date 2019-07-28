@@ -21,6 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/',views.show_hello),
     path('cv/',views.my_cv),
-    path('add/',views.add)
+    path('add/',views.add),
+    path('comments/',views.comments),
+    path('test/',views.test_session)
 
 ]
